@@ -48,6 +48,8 @@ We have illustrated the following **UML Class Diagrams** to describe the high-le
 
 We have uploaded our Final Demo on <a href="https://www.youtube.com/watch?v=Qz6d5o-q-Cc" target="_blank">Youtube</a>.
 
+https://github.com/user-attachments/assets/b3679e9f-b17b-4178-85d7-6df08a808b2d
+
 ## Credit
 
 This was completed as part of the <b>CPEN 333 - Software Design</b> course in the <b>The University of British Columbia Electrical and Computer Engineering</b> undergraduate program. We received tremendous support and guidance from Dr. Farshid Agharebparast.
