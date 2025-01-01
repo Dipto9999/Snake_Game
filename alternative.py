@@ -78,26 +78,26 @@ class Gui():
         '''
         def updateSnake() -> None:
             if game.full["move"].acquire(blocking = False): # Consume New Value
-                game.locks["move"].acquire(): # Critical Section (Start)
+                game.locks["move"].acquire() # Critical Section (Start)
                 self.canvas.coords(self.snakeIcon, *[coord for point in game.snakeCoordinates for coord in point])
                 game.locks["move"].release() # Critical Section (End)
         def updatePrey() -> None:
             if game.full["prey"].acquire(blocking = False): # Consume New Value
-                game.locks["prey"].acquire(): # Critical Section (Start)
+                game.locks["prey"].acquire() # Critical Section (Start)
                 self.canvas.coords(self.preyIcon, *game.preyCoordinates)
                 game.locks["prey"].release() # Critical Section (End)
         def updateScore() -> None:
             if game.full["score"].acquire(blocking = False): # Consume New Value
-                game.locks["score"].acquire(): # Critical Section (Start)
+                game.locks["score"].acquire() # Critical Section (Start)
                 self.canvas.itemconfigure(self.score, text=f"Your Score: {game.score}")
                 game.locks["score"].release() # Critical Section (End)
 
+        updateSnake()
+        updatePrey()
+        updateScore()
         if game.full["game_over"].acquire(blocking = False): # Consume New Value (i.e. Game Over)
             self.gameOver()
         else:
-            updateSnake()
-            updatePrey()
-            updateScore()
             self.root.after(100, self.update) # Call Function Every 100 ms
 
     def gameOver(self) -> None:

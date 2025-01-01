@@ -9,7 +9,7 @@
 \linespread{1}
 \setlength{\parindent}{0pt} % Disable paragraph indentation
 
-\title{CPEN 333 Final Project : Part I Alternative (Multithreaded Game)}
+\title{CPEN 333 Final Project : Multithreaded Game \\ (Alternative Implementation)}
 \author{Group G6 : Muntakim Rahman and Tomaz Zlindra}
 \date{December 6th, 2024}
 
@@ -26,17 +26,17 @@ Having removed the use of the \texttt{Queue}, \texttt{QueueHandler} classes, we 
 the \textit{4} shared resources (i.e. "\texttt{game\_over}", "\texttt{score}", "\texttt{prey}", "\texttt{move}") to indicate when they have been produced.
 All, except for \texttt{"game\_over"} are protected via critical section using a \texttt{dict} of \texttt{mutexes}. \\
 
-Please see the comment at the top of the \texttt{part1\_alternative.py} file for a description of the implementation. This file will describe the benefits, disadvantages, and challenges of this.
+Please see the comment at the top of the \texttt{alternative.py} file for a description of the implementation. This file will describe the benefits, disadvantages, and challenges of this.
 
 \section{Benefits}
 
-Since we were able to eliminate the need for \textit{2} classes, this simplified the relationships between classes, as shown in Figure \ref{fig:Part1_Alternative_ClassDiagrams}. \\
+Since we were able to eliminate the need for \textit{2} classes, this simplified the relationships between classes, as shown in Figure \ref{fig:Alternative_ClassDiagrams}. \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{../Part_1_Alternative_ClassDiagrams.jpg}
-    \caption{Part 1 Alternative - UML Relationship}
-    \label{fig:Part1_Alternative_ClassDiagrams}
+    \includegraphics[width=0.7\textwidth]{../Alternative_ClassDiagrams.jpg}
+    \caption{Alternative Implementation - UML Relationship}
+    \label{fig:Alternative_ClassDiagrams}
 \end{figure}
 
 \subsection{Reader-Writer Abstraction}
