@@ -11,7 +11,7 @@
 
 ## Overview
 
-We developed a software implementation of the classic [Snake Game](https://en.wikipedia.org/wiki/Snake_(video_game_genre)) in **Python** in a multithreaded application.
+We developed the classic [Snake Game](https://en.wikipedia.org/wiki/Snake_(video_game_genre)) in a multithreaded **Python** application.
 
 ### Design
 
@@ -45,6 +45,8 @@ We have illustrated the following **UML Class Diagrams** to describe the high-le
 </table>
 
 ## Demonstration
+
+We have uploaded our Final Demo on <a href="https://www.youtube.com/watch?v=Qz6d5o-q-Cc" target="_blank">Youtube</a>.
 
 ## Credit
 
