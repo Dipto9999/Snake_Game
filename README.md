@@ -15,10 +15,10 @@ We developed the classic [Snake Game](https://en.wikipedia.org/wiki/Snake_(video
 
 ## Program Design
 
-This was originally designed with the `Queue.queue()` class to achieve synchronization (i.e. *message passing*).
+This was originally designed with the `Queue.queue()` class to achieve synchronization (i.e. *message passing* for **Inter-Process Communication (IPC)** model).
 
 In our alternative implementation, we redesigned this with the
-`threading.Lock()` and `threading.Semaphore()` classes (i.e. *memory sharing*)
+`threading.Lock()` and `threading.Semaphore()` classes (i.e. *memory sharing* for **IPC** model)
 
 ### UML Relationships
 
