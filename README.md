@@ -3,9 +3,9 @@
 ## Contents
 
 * [Overview](#Overview)
-    * [Program Design](#Design)
+* [Program Design](#Program-Design)
+  * [UML Relationships](#UML-Relationships)
 * [Documentation](#Documentation)
-    * [UML Relationships](#UML-Relationships)
 * [Demonstration](#Demonstration)
 * [Credit](#Credit)
 
@@ -13,17 +13,12 @@
 
 We developed the classic [Snake Game](https://en.wikipedia.org/wiki/Snake_(video_game_genre)) in a multithreaded **Python** application.
 
-### Design
+## Program Design
 
 This was originally designed with the `Queue.queue()` class to achieve synchronization (i.e. *message passing*).
 
 In our alternative implementation, we redesigned this with the
 `threading.Lock()` and `threading.Semaphore()` classes (i.e. *memory sharing*)
-
-## Documentation
-
-Please review the extensive documentation in our report for the [Original Implementation](/Documentation/Original/Original.pdf), as well as the [Alternative Implementation](/Documentation/Alternative/Alternative.pdf)
-
 
 ### UML Relationships
 
@@ -43,6 +38,10 @@ We have illustrated the following **UML Class Diagrams** to describe the high-le
     <td><img src = "Documentation/Alternative_ClassDiagrams.jpg"></td>
   </tr>
 </table>
+
+## Documentation
+
+Please review the extensive documentation in our report for the [Original Implementation](/Documentation/Original/Original.pdf), as well as the [Alternative Implementation](/Documentation/Alternative/Alternative.pdf)
 
 ## Demonstration
 
