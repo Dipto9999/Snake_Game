@@ -186,12 +186,12 @@ class Game():
             self.snakeCoordinates = [*self.snakeCoordinates, NewSnakeCoordinates] # Append New Snake Head
 
             self.score += 1
-            gameQueue.put_nowait({"score" : self.score})
+            gameQueue.put({"score" : self.score})
             self.createNewPrey()
         else:
             self.snakeCoordinates = [*self.snakeCoordinates[1:], NewSnakeCoordinates] # Move Snake
         self.isGameOver(NewSnakeCoordinates)
-        gameQueue.put_nowait({"move" :  self.snakeCoordinates})
+        gameQueue.put({"move" :  self.snakeCoordinates})
 
     def calculateNewCoordinates(self) -> tuple:
         """
@@ -230,7 +230,7 @@ class Game():
 
         if (x_collision) or (y_collision) or ((x, y) in self.snakeCoordinates[:-1]):
             self.gameNotOver = False
-            gameQueue.put_nowait({"game_over" : True})
+            gameQueue.put({"game_over" : True})
         return
 
     def createNewPrey(self) -> None:
@@ -258,7 +258,7 @@ class Game():
             generatedCoordinates[1] + PREY_ICON_WIDTH // 2 # y1
         )
 
-        gameQueue.put_nowait({"prey" : preyCoordinates})
+        gameQueue.put({"prey" : preyCoordinates})
 
 if __name__ == "__main__":
     #some constants for our GUI
